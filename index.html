@@ -1,0 +1,19 @@
+<section class="rubezh-slider-wrapper py-4 pt-lg-7 pb-lg-8">
+	<div id="r-slider" class="rubezh-slider">
+		{% for key, slide in site.sliders.index.general %}
+		<a href="{{ slide.link }}" class="r-slide{% if loop.last %} open{% endif %}">
+			<div class="r-slide--desc">
+				<div class="letter">{{ slide.letter }}</div>
+				<div class="content">
+					<div class="content-title">{{ slide.title }}</div>
+					<div class="content-desc">{{ slide.desc }}</div>
+					<div class="content-link_title">{{ slide.link_title }}</div>
+				</div>
+			</div>
+			<div class="r-slide--img">
+				<img src="{{ slide.img }}" alt="{{ slide.title }}">
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</section>
